@@ -1,0 +1,29 @@
+{
+  "name": "bridge-docs",
+  "version": "0.0.1",
+  "description": "The docs for Bridge",
+  "main": "index.js",
+  "scripts": {
+    "start": "forever start index.js",
+    "stop": "forever stop index.js",
+    "restart": "forever restart index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Islive-io/bridge-docs.git"
+  },
+  "keywords": [
+    "bridge",
+    "docs"
+  ],
+  "author": "RWOverdijk",
+  "license": "BSD 4-Clause",
+  "bugs": {
+    "url": "https://github.com/Islive-io/bridge-docs/issues"
+  },
+  "homepage": "https://github.com/Islive-io/bridge-docs",
+  "dependencies": {
+    "forever": "^0.11.1",
+    "node-static": "^0.7.4"
+  }
+}
