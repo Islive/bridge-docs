@@ -91,6 +91,39 @@ define(['bridge!user/performer'], function(performer) {
 
 -----
 
+loginByHash <small>- Added at v0.0.1</small>
+------
+
+Login a performer by hash.
+
+### Parameters
+
+| Parameter | Type     | Description                                |
+| --------- | -------- | ------------------------------------------ |
+| email     | String   | The email address                          |
+| hash      | String   | The hash                                   |
+| callback  | Function | The callback that will be called when done |
+
+### Example
+
+```javascript
+define(['bridge!user/performer'], function(performer) {
+
+  var email = 'user@example.net'
+    , hash  = 'Jpe+MKFtRW7Hs1xfPKjUMQ';
+
+  performer.loginByHash(email, hash, function(error, result) {
+    if (error) {
+      // Authentication error
+    }
+
+    var performer = result;
+  });
+});
+```
+
+-----
+
 getUserId <small>- Added at v0.0.1</small>
 -----
 Get the user id of the authenticated performer.
