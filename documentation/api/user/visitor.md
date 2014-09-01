@@ -131,10 +131,10 @@ Register a new visitor
 
 ### Parameters
 
-| Parameter | Type     | Description                                |
-| --------- | -------- | ------------------------------------------ |
+| Parameter | Type     | Description                                                      |
+| --------- | -------- | ---------------------------------------------------------------- |
 | params    | Object   | Object of params: username, password, email[, wallet][, p][, pi] |
-| callback  | Function | The callback that will be called when done |
+| callback  | Function | The callback that will be called when done                       |
 
 ### Example
 
