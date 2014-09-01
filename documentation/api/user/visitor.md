@@ -122,6 +122,44 @@ define(['bridge!user/visitor'], function(visitor) {
 });
 ```
 
+-----
+
+register <small>- Added at v0.0.1</small>
+------
+
+Register a new visitor
+
+### Parameters
+
+| Parameter | Type     | Description                                                      |
+| --------- | -------- | ---------------------------------------------------------------- |
+| params    | Object   | Object of params: username, password, email[, wallet][, p][, pi] |
+| callback  | Function | The callback that will be called when done                       |
+
+### Example
+
+```javascript
+define(['bridge!user/visitor'], function(visitor) {
+
+  var params = {
+    username: 'foo',
+    password: 'abcd',
+    email   : 'my@domain.nl',
+    wallet  : 'wallet url',   // The wallet `from_url`. NOTE: Will create wallet account.
+    p       : '61',           // Defaults to Object "partnerCode"
+    pi      : 'typein'        // Defaults to Object "partnerInfo"
+  };
+
+  visitor.register(params, function(error, createdAccount) {
+    if (error) {
+      // Authentication error
+    }
+
+    var user = createdAccount;
+  });
+});
+```
+
 ------
 
 getUserId <small>- Added at v0.0.1</small>
