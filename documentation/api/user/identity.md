@@ -244,3 +244,24 @@ define(['bridge!user/identity'], function(identity) {
 });
 ```
 
+------
+
+getPartnerInfo <small>- Added at v0.0.1</small>
+------
+
+Get the partnerInfo for `identity` based on conditions.
+
+### Parameters
+| Parameter | Type     | Description                                |
+| --------- | -------- | ------------------------------------------ |
+| callback  | Function | The callback that will be called when done |
+
+### Example
+
+```javascript
+define(['bridge!user/identity'], function (identity) {
+  identity.getPartnerInfo(function (error, info) {
+    // Info holds "partnerCode" and "partnerInfo" properties.
+  });
+});
+```
