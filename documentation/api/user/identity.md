@@ -255,6 +255,7 @@ Get the partnerInfo for `identity` based on conditions.
 | Parameter | Type     | Description                                |
 | --------- | -------- | ------------------------------------------ |
 | callback  | Function | The callback that will be called when done |
+| offline   | Boolean  | Check identity for partnerInfo or not.     |
 
 ### Example
 
@@ -262,6 +263,6 @@ Get the partnerInfo for `identity` based on conditions.
 define(['bridge!user/identity'], function (identity) {
   identity.getPartnerInfo(function (error, info) {
     // Info holds "partnerCode" and "partnerInfo" properties.
-  });
+  }, true); // Won't try to get info from identified user.
 });
 ```
