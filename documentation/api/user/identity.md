@@ -266,3 +266,37 @@ define(['bridge!user/identity'], function (identity) {
   }, true); // Won't try to get info from identified user.
 });
 ```
+
+-----
+
+updateUser <small>- Added at v0.2.0</small>
+-----
+Update the given properties of a authenticated user.
+
+### Parameters
+
+| Parameter | Type          | Description                                            |
+| --------- | ------------- | ------------------------------------------------------ |
+| userId    | Integer       | The user id                                            |
+| prop      | Object        | The properties you want to update                      |
+| callback  | Function      | The callback that will be called when done             |
+
+### Example
+```js
+define(['bridge!user/identity'], function(identity) {
+
+  var userId = 1337
+    , prop   = {
+        mailable: 1,
+        email   : 'bob@keeshond.com'
+      };
+
+  identity.updateUser(userId, prop, function(error, response) {
+    if (error) {
+      // Error while setting the new data
+    }
+
+    var userIndentity = reponse;
+  });
+});
+```
