@@ -275,11 +275,11 @@ Update the given properties of a authenticated user.
 
 ### Parameters
 
-| Parameter | Type          | Description                                            |
-| --------- | ------------- | ------------------------------------------------------ |
-| userId    | Integer       | The user id                                            |
-| prop      | Object        | The properties you want to update                      |
-| callback  | Function      | The callback that will be called when done             |
+| Parameter | Type             | Description                                            |
+| --------- | ---------------- | ------------------------------------------------------ |
+| user      | Integer / Object | The user id, user instance or role instance            |
+| prop      | Object           | The properties you want to update                      |
+| callback  | Function         | The callback that will be called when done             |
 
 ### Example
 
@@ -296,7 +296,7 @@ define(['bridge!user/identity'], function(identity) {
 
     var userIdentity = response;
   });
-});
+});x
 ```
 
 -----
