@@ -269,7 +269,7 @@ define(['bridge!user/identity'], function (identity) {
 
 -----
 
-updateUser <small>- Added at v0.2.0</small>
+update <small>- Added at v0.1.0</small>
 -----
 Update the given properties of a authenticated user.
 
@@ -282,21 +282,21 @@ Update the given properties of a authenticated user.
 | callback  | Function      | The callback that will be called when done             |
 
 ### Example
+
 ```js
 define(['bridge!user/identity'], function(identity) {
 
-  var userId = 1337
-    , prop   = {
-        mailable: 1,
-        email   : 'bob@keeshond.com'
-      };
+  var user           = 1337
+    , updateValues   = {notificationEmail : 'bob@keeshond.com'};
 
-  identity.updateUser(userId, prop, function(error, response) {
+  identity.update(user, updateValues, function(error, response) {
     if (error) {
       // Error while setting the new data
     }
 
-    var userIndentity = reponse;
+    var userIdentity = response;
   });
 });
 ```
+
+-----
