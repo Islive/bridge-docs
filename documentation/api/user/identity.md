@@ -271,32 +271,30 @@ define(['bridge!user/identity'], function (identity) {
 
 update <small>- Added at v0.1.0</small>
 -----
-Update the given properties of a authenticated user.
+Update the given properties for the authenticated user.
 
 ### Parameters
 
-| Parameter | Type             | Description                                            |
-| --------- | ---------------- | ------------------------------------------------------ |
-| user      | Integer / Object | The user id, user instance or role instance            |
-| prop      | Object           | The properties you want to update                      |
-| callback  | Function         | The callback that will be called when done             |
+| Parameter    | Type             | Description                                |
+| ------------ | ---------------- | ------------------------------------------ |
+| updateValues | Object           | The properties you want to update          |
+| callback     | Function         | The callback that will be called when done |
 
 ### Example
 
 ```js
 define(['bridge!user/identity'], function(identity) {
 
-  var user           = 1337
-    , updateValues   = {notificationEmail : 'bob@keeshond.com'};
+  var updateValues = {notificationEmail : 'bob@keeshond.com'};
 
-  identity.update(user, updateValues, function(error, response) {
+  identity.update(updateValues, function(error, response) {
     if (error) {
       // Error while setting the new data
     }
 
     var userIdentity = response;
   });
-});x
+});
 ```
 
 -----
