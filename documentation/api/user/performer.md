@@ -98,12 +98,12 @@ Login a performer by hash.
 
 ### Parameters
 
-| Parameter | Type              | Description                                |
-| --------- | ----------------- | ------------------------------------------ |
-| email     | String            | The email address                          |
-| hash      | String            | The hash                                   |
-| username  | String / Function | The username, or callback                  |
-| callback  | Function          | Callback if username was supplied          |
+| Parameter  | Type              | Description                                |
+| ---------- | ----------------- | ------------------------------------------ |
+| email      | String            | The email address                          |
+| hash       | String            | The hash                                   |
+| [username] | String / Function | The username, or callback                  |
+| callback   | Function          | Callback if username was supplied          |
 
 ### Example
 
