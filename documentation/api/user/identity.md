@@ -46,13 +46,13 @@ Login a user by hash.
 
 ### Parameters
 
-| Parameter  | Type              | Description                                |
-| ---------- | ----------------- | ------------------------------------------ |
-| role       | String            | The role authenticating for                |
-| email      | String            | The email address                          |
-| hash       | String            | The hash                                   |
-| [username] | String / Function | The username, or callback                  |
-| callback   | Function          | Callback if username was supplied          |
+| Parameter  | Type     | Description                       |
+| ---------- | -------- | --------------------------------- |
+| role       | String   | The role authenticating for       |
+| email      | String   | The email address                 |
+| hash       | String   | The hash                          |
+| [username] | String   | The username                      |
+| callback   | Function | Callback to be called after login |
 
 ### Example
 
