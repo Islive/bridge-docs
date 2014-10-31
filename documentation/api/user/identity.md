@@ -299,3 +299,35 @@ define(['bridge!user/identity'], function(identity) {
 ```
 
 -----
+
+verify <small>- Added at v0.1.0</small>
+-----
+Verify the (notification)email for the authenticated user.
+
+### Parameters
+
+| Parameter    | Type             | Description                                    |
+| ------------ | ---------------- | -----------------------------------------------|
+| userId       | String           | The user ID                                    |
+| type         | String           | Which email to verify, notificationEmail|email |
+| callback     | Function         | The callback that will be called when done     |
+
+### Example
+
+```js
+define(['bridge!user/identity'], function(identity) {
+
+  var userId = 123,
+      type   = 'notificationEmail';
+
+  identity.verify(userId, type, function(error, result) {
+    if (error) {
+      // Error while verifying user
+    }
+
+    var boolean = result;
+  });
+});
+```
+
+-----
