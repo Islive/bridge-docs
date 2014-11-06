@@ -302,14 +302,14 @@ define(['bridge!user/identity'], function(identity) {
 
 verify <small>- Added at v0.1.0</small>
 -----
-Verify the (notification)email of a user
+Verify the (notification)email adress of a user
 
 ### Parameters
 
 | Parameter    | Type             | Description                                    |
 | ------------ | ---------------- | -----------------------------------------------|
-| [user]       | String|{}        | User object or userId                          |
-| type         | String           | Which type to verify, notificationEmail|email  |
+| [user]       | String/{}        | User object or userId                          |
+| type         | String           | Which type to verify, notificationEmail/email  |
 | hash         | String           | The hash                                       |
 | callback     | Function         | The callback that will be called when done     |
 
@@ -336,13 +336,13 @@ define(['bridge!user/identity'], function(identity) {
 
 verifyEmail <small>- Added at v0.1.0</small>
 -----
-Verify the email of a user
+Verify the email address of a user
 
 ### Parameters
 
 | Parameter    | Type             | Description                                    |
 | ------------ | ---------------- | -----------------------------------------------|
-| [user]       | String|{}        | User object or userId                          |
+| [user]       | String/{}        | User object or userId                          |
 | hash         | String           | The hash                                       |
 | callback     | Function         | The callback that will be called when done     |
 
@@ -368,13 +368,13 @@ define(['bridge!user/identity'], function(identity) {
 
 verifyNotificationEmail <small>- Added at v0.1.0</small>
 -----
-Verify the notificationEmail of a user
+Verify the notificationEmail adress of a user
 
 ### Parameters
 
 | Parameter    | Type             | Description                                    |
 | ------------ | ---------------- | -----------------------------------------------|
-| [user]       | String|{}        | User object or userId                          |
+| [user]       | String/{}        | User object or userId                          |
 | hash         | String           | The hash                                       |
 | callback     | Function         | The callback that will be called when done     |
 
