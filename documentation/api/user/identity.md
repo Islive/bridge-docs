@@ -397,3 +397,33 @@ define(['bridge!user/identity'], function(identity) {
 ```
 
 -----
+
+updatePassword <small>- Added at v0.1.0</small>
+-----
+Update the password for the authenticated user.
+
+### Parameters
+
+| Parameter    | Type             | Description                                |
+| ------------ | ---------------- | ------------------------------------------ |
+| password     | String           | The new password                           |
+| callback     | Function         | The callback that will be called when done |
+
+### Example
+
+```js
+define(['bridge!user/identity'], function(identity) {
+
+  var password = 'supersecret';
+
+  identity.updatePassword(password, function(error, response) {
+    if (error) {
+      // Error while setting the new data
+    }
+
+    var status = response;
+  });
+});
+```
+
+-----
