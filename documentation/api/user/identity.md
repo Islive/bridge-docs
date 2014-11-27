@@ -398,7 +398,7 @@ define(['bridge!user/identity'], function(identity) {
 
 -----
 
-updatePassword <small>- Added at v0.1.0</small>
+updatePassword <small>- Added at v0.2.0</small>
 -----
 Update the password for the authenticated user.
 
