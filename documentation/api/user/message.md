@@ -306,3 +306,30 @@ define(['bridge!user/message'], function(message) {
   });
 });
 ```
+
+-----
+
+deleteThread <small>- Added at v0.3.0</small>
+-----
+Delete a thread.
+
+### Parameters
+
+| Parameter | Type     | Description                                            |
+| --------- | -------- | ------------------------------------------------------ |
+| threadId  | String   | The ID of the thread                                   |
+| callback  | Function | The callback that will be called when deleting is done |
+
+### Example
+```js
+define(['bridge!user/message'], function(message) {
+
+  message.deleteThread('53b2b258472c37b6250585e5', function(error, result) {
+    if (error) {
+      // Error while deleting thread
+    }
+
+    var deletedThread = result;
+  });
+});
+```
