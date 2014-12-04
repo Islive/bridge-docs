@@ -306,3 +306,30 @@ define(['bridge!user/message'], function(message) {
   });
 });
 ```
+
+-----
+
+archiveThread <small>- Added at v0.3.0</small>
+-----
+Archives a thread.
+
+### Parameters
+
+| Parameter | Type     | Description                                            |
+| --------- | -------- | ------------------------------------------------------ |
+| threadId  | String   | The ID of the thread                                   |
+| callback  | Function | The callback that will be called when done             |
+
+### Example
+```js
+define(['bridge!user/message'], function(message) {
+
+  message.archiveThread('53b2b258472c37b6250585e5', function(error, result) {
+    if (error) {
+      // Error while archiving thread
+    }
+
+    var archivedThread = result;
+  });
+});
+```
