@@ -268,7 +268,7 @@ define(['bridge!user/visitor'], function(visitor) {
 follow <small>- Added at v0.2.3</small>
 ------
 
-Follow an performer
+Follow a performer
 
 ### Parameters
 
@@ -324,7 +324,7 @@ define(['bridge!user/visitor'], function(visitor) {
 unFollow <small>- Added at v0.2.3</small>
 ------
 
-Unfollow an performer
+Unfollow a performer
 
 ### Parameters
 
