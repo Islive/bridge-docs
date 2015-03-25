@@ -264,3 +264,111 @@ define(['bridge!user/visitor'], function(visitor) {
   });
 });
 ```
+
+follow <small>- Added at v0.3.0</small>
+------
+
+Follow a performer
+
+### Parameters
+
+| Parameter | Type     | Description                                            |
+| --------- | -------- | ------------------------------------------------------ |
+| username | String   | The name of the performer                              |
+| callback  | Function | The callback that will be called when creation is done |
+
+### Example
+```js
+define(['bridge!user/visitor'], function(visitor) {
+
+  var performerName = 'kaatje';
+
+  visitor.follow(performerName, function(error) {
+    if (error) {
+      // Failed following the performer
+    }
+  });
+});
+```
+
+---------
+isFollowing <small>- Added at v0.3.0</small>
+------
+
+See if the user follows a certain performer
+
+### Parameters
+
+| Parameter  | Type     | Description                                            |
+| ---------- | -------- | ------------------------------------------------------ |
+| username   | String   | The name of the performer                              |
+| callback   | Function | The callback that will be called when creation is done |
+
+### Example
+```js
+define(['bridge!user/visitor'], function(visitor) {
+
+  var performerName = 'kaatje';
+
+  visitor.isFollowing(performerName, function(error, result) {
+    if (error) {
+      // Failed getting the followed performer(s)
+    }
+
+    var performers = result;
+  });
+});
+```
+
+---------
+following <small>- Added at v0.3.0</small>
+------
+
+See which performers the user is following
+
+### Parameters
+
+| Parameter  | Type     | Description                                            |
+| ---------- | -------- | ------------------------------------------------------ |
+| callback   | Function | The callback that will be called when creation is done |
+
+### Example
+```js
+define(['bridge!user/visitor'], function(visitor) {
+
+  visitor.isFollowing(function(error, result) {
+    if (error) {
+      // Failed getting the followed performer(s)
+    }
+
+    var performers = result;
+  });
+});
+```
+
+---------
+unFollow <small>- Added at v0.3.0</small>
+------
+
+Unfollow a performer
+
+### Parameters
+
+| Parameter  | Type     | Description                                            |
+| ---------- | -------- | ------------------------------------------------------ |
+| username   | String   | The name of the performer                              |
+| callback   | Function | The callback that will be called when creation is done |
+
+### Example
+```js
+define(['bridge!user/visitor'], function(visitor) {
+
+  var performerName = 'kaatje';
+
+  visitor.unFollow(performerName, function(error) {
+    if (error) {
+      // Failed unfollowing the performer
+    }
+  });
+});
+```
