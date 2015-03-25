@@ -310,12 +310,12 @@ define(['bridge!user/visitor'], function(visitor) {
 
   var performerName = 'kaatje';
 
-  visitor.isFollowing(performerName, function(error, result) {
+  visitor.isFollowing(performerName, function(error, boolean) {
     if (error) {
       // Failed getting the followed performer(s)
     }
 
-    var performers = result;
+    var isFollowing = boolean;
   });
 });
 ```
