@@ -265,7 +265,7 @@ define(['bridge!user/visitor'], function(visitor) {
 });
 ```
 
-follow <small>- Added at v0.2.3</small>
+follow <small>- Added at v0.3.0</small>
 ------
 
 Follow a performer
