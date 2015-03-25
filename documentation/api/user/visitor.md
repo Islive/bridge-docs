@@ -264,3 +264,85 @@ define(['bridge!user/visitor'], function(visitor) {
   });
 });
 ```
+
+follow <small>- Added at v0.2.3</small>
+------
+
+Follow an performer
+
+### Parameters
+
+| Parameter | Type     | Description                                            |
+| --------- | -------- | ------------------------------------------------------ |
+| username | String   | The name of the performer                              |
+| callback  | Function | The callback that will be called when creation is done |
+
+### Example
+```js
+define(['bridge!user/visitor'], function(visitor) {
+
+  var performerName = 'kaatje';
+
+  visitor.follow(performerName, function(error) {
+    if (error) {
+      // Failed following the performer
+    }
+  });
+});
+```
+
+---------
+isFollowing <small>- Added at v0.2.3</small>
+------
+
+Check which performer(s) the user is following.
+
+### Parameters
+
+| Parameter  | Type     | Description                                            |
+| ---------- | -------- | ------------------------------------------------------ |
+| [username] | String   | The name of the performer                              |
+| callback   | Function | The callback that will be called when creation is done |
+
+### Example
+```js
+define(['bridge!user/visitor'], function(visitor) {
+
+  var performerName = 'kaatje';
+
+  visitor.isFollowing(performerName, function(error, result) {
+    if (error) {
+      // Failed getting the followed performer(s)
+    }
+
+    var performers = result;
+  });
+});
+```
+
+---------
+unFollow <small>- Added at v0.2.3</small>
+------
+
+Unfollow an performer
+
+### Parameters
+
+| Parameter  | Type     | Description                                            |
+| ---------- | -------- | ------------------------------------------------------ |
+| username   | String   | The name of the performer                              |
+| callback   | Function | The callback that will be called when creation is done |
+
+### Example
+```js
+define(['bridge!user/visitor'], function(visitor) {
+
+  var performerName = 'kaatje';
+
+  visitor.unFollow(performerName, function(error) {
+    if (error) {
+      // Failed unfollowing the performer
+    }
+  });
+});
+```
