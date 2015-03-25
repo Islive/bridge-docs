@@ -295,13 +295,13 @@ define(['bridge!user/visitor'], function(visitor) {
 isFollowing <small>- Added at v0.2.3</small>
 ------
 
-Check which performer(s) the user is following.
+See if the user follows a certain performer
 
 ### Parameters
 
 | Parameter  | Type     | Description                                            |
 | ---------- | -------- | ------------------------------------------------------ |
-| [username] | String   | The name of the performer                              |
+| username   | String   | The name of the performer                              |
 | callback   | Function | The callback that will be called when creation is done |
 
 ### Example
@@ -311,6 +311,32 @@ define(['bridge!user/visitor'], function(visitor) {
   var performerName = 'kaatje';
 
   visitor.isFollowing(performerName, function(error, result) {
+    if (error) {
+      // Failed getting the followed performer(s)
+    }
+
+    var performers = result;
+  });
+});
+```
+
+---------
+following <small>- Added at v0.2.3</small>
+------
+
+See which performers the user is following
+
+### Parameters
+
+| Parameter  | Type     | Description                                            |
+| ---------- | -------- | ------------------------------------------------------ |
+| callback   | Function | The callback that will be called when creation is done |
+
+### Example
+```js
+define(['bridge!user/visitor'], function(visitor) {
+
+  visitor.isFollowing(function(error, result) {
     if (error) {
       // Failed getting the followed performer(s)
     }
