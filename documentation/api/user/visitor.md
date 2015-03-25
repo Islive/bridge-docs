@@ -292,7 +292,7 @@ define(['bridge!user/visitor'], function(visitor) {
 ```
 
 ---------
-isFollowing <small>- Added at v0.2.3</small>
+isFollowing <small>- Added at v0.3.0</small>
 ------
 
 See if the user follows a certain performer
@@ -321,7 +321,7 @@ define(['bridge!user/visitor'], function(visitor) {
 ```
 
 ---------
-following <small>- Added at v0.2.3</small>
+following <small>- Added at v0.3.0</small>
 ------
 
 See which performers the user is following
@@ -347,7 +347,7 @@ define(['bridge!user/visitor'], function(visitor) {
 ```
 
 ---------
-unFollow <small>- Added at v0.2.3</small>
+unFollow <small>- Added at v0.3.0</small>
 ------
 
 Unfollow a performer
