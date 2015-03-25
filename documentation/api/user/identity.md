@@ -46,12 +46,13 @@ Login a user by hash.
 
 ### Parameters
 
-| Parameter | Type     | Description                                |
-| --------- | -------- | ------------------------------------------ |
-| role      | String   | The role authenticating for                |
-| email     | String   | The email address                          |
-| hash      | String   | The hash                                   |
-| callback  | Function | The callback that will be called when done |
+| Parameter  | Type     | Description                       |
+| ---------- | -------- | --------------------------------- |
+| role       | String   | The role authenticating for       |
+| email      | String   | The email address                 |
+| hash       | String   | The hash                          |
+| [username] | String   | The username                      |
+| callback   | Function | Callback to be called after login |
 
 ### Example
 
@@ -244,3 +245,185 @@ define(['bridge!user/identity'], function(identity) {
 });
 ```
 
+------
+
+getPartnerInfo <small>- Added at v0.0.1</small>
+------
+
+Get the partnerInfo for `identity` based on conditions.
+
+### Parameters
+| Parameter | Type     | Description                                |
+| --------- | -------- | ------------------------------------------ |
+| callback  | Function | The callback that will be called when done |
+| offline   | Boolean  | Check identity for partnerInfo or not.     |
+
+### Example
+
+```javascript
+define(['bridge!user/identity'], function (identity) {
+  identity.getPartnerInfo(function (error, info) {
+    // Info holds "partnerCode" and "partnerInfo" properties.
+  }, true); // Won't try to get info from identified user.
+});
+```
+
+-----
+
+update <small>- Added at v0.1.0</small>
+-----
+Update the given properties for the authenticated user.
+
+### Parameters
+
+| Parameter    | Type             | Description                                |
+| ------------ | ---------------- | ------------------------------------------ |
+| updateValues | Object           | The properties you want to update          |
+| callback     | Function         | The callback that will be called when done |
+
+### Example
+
+```js
+define(['bridge!user/identity'], function(identity) {
+
+  var updateValues = {notificationEmail : 'bob@keeshond.com'};
+
+  identity.update(updateValues, function(error, response) {
+    if (error) {
+      // Error while setting the new data
+    }
+
+    var userIdentity = response;
+  });
+});
+```
+
+-----
+
+verify <small>- Added at v0.1.0</small>
+-----
+Verify the (notification)email adress of a user
+
+### Parameters
+
+| Parameter    | Type             | Description                                    |
+| ------------ | ---------------- | -----------------------------------------------|
+| [user]       | String/{}        | User object or userId                          |
+| type         | String           | Which type to verify, notificationEmail/email  |
+| hash         | String           | The hash                                       |
+| callback     | Function         | The callback that will be called when done     |
+
+### Example
+
+```js
+define(['bridge!user/identity'], function(identity) {
+
+  var user   = 123,
+      type   = 'notificationEmail',
+      hash   = '123978asd7a987192837a9sddadc';
+
+  identity.verify(user, type, hash, function(error, result) {
+    if (error) {
+      // Error while verifying user
+    }
+
+    var boolean = result;
+  });
+});
+```
+
+-----
+
+verifyEmail <small>- Added at v0.1.0</small>
+-----
+Verify the email address of a user
+
+### Parameters
+
+| Parameter    | Type             | Description                                    |
+| ------------ | ---------------- | -----------------------------------------------|
+| [user]       | String/{}        | User object or userId                          |
+| hash         | String           | The hash                                       |
+| callback     | Function         | The callback that will be called when done     |
+
+### Example
+
+```js
+define(['bridge!user/identity'], function(identity) {
+
+  var user   = 123,
+      hash   = '123978asd7a987192837a9sddadc';
+
+  identity.verifyEmail(user, hash, function(error, result) {
+    if (error) {
+      // Error while verifying user
+    }
+
+    var boolean = result;
+  });
+});
+```
+
+-----
+
+verifyNotificationEmail <small>- Added at v0.1.0</small>
+-----
+Verify the notificationEmail adress of a user
+
+### Parameters
+
+| Parameter    | Type             | Description                                    |
+| ------------ | ---------------- | -----------------------------------------------|
+| [user]       | String/{}        | User object or userId                          |
+| hash         | String           | The hash                                       |
+| callback     | Function         | The callback that will be called when done     |
+
+### Example
+
+```js
+define(['bridge!user/identity'], function(identity) {
+
+  var user   = 123,
+      hash   = '123978asd7a987192837a9sddadc';
+
+  identity.verifyNotificationEmail(user, hash, function(error, result) {
+    if (error) {
+      // Error while verifying user
+    }
+
+    var boolean = result;
+  });
+});
+```
+
+-----
+
+updatePassword <small>- Added at v0.2.0</small>
+-----
+Update the password for the authenticated user.
+
+### Parameters
+
+| Parameter    | Type             | Description                                |
+| ------------ | ---------------- | ------------------------------------------ |
+| password     | String           | The new password                           |
+| callback     | Function         | The callback that will be called when done |
+
+### Example
+
+```js
+define(['bridge!user/identity'], function(identity) {
+
+  var password = 'supersecret';
+
+  identity.updatePassword(password, function(error, response) {
+    if (error) {
+      // Error while setting the new data
+    }
+
+    var status = response;
+  });
+});
+```
+
+-----
